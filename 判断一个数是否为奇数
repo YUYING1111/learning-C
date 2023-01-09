@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+	int num=0;
+	printf("请在屏幕上输入一个数\n",num);
+	scanf("%d",&num);
+	if(num%2==1)
+		printf("是奇数\n");
+	else
+		printf("不是奇数\n");
+	return 0;
+}
