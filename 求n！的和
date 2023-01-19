@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	long long i=1,s=1,t=0;   //变量的类型要保证
+	long n;
+	printf("请在屏幕上输入一个数\n");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+		{
+			s=s*i;
+			t=t+s;
+		}
+	printf("%d！的求和为：%d",n,t);
+	return 0;
+}
