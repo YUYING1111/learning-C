@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	{
+	int i;		//i和a[5]都要进行类型定义
+	int a[5]; //5代表有5个整数
+	printf("请输入5个整数\n");
+	for(i=0;i<5;i++)
+			scanf("%d",&a[i]);
+	printf("按照相反顺序的输出结果为：\n"); //加换行符便于清晰观察
+	for(i=4;i>=0;i--)		//这里i只能=4不然会报错，i为下标 4 3 2 1 0正好5个数
+		printf("%d ",a[i]);//%d后多加一个空格保证间隔
+	}
+	printf("\n");
+ return 0;
+}
