@@ -1,0 +1,49 @@
+// 猜数游戏.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+//
+
+#include <iostream>
+#include<time.h>
+using namespace std;
+
+int main()
+{
+	int nNum1,num,i,nNum2;
+	cout << "Hello master!Welcome to guess number game" << endl;
+	cout << "Please choose difficulty:\n" << endl;
+	cout << "1-easy(数字范围0~50)\n" << endl;
+	cout << "2-hard(数字范围0~100)\n" << endl;
+	cin >> nNum1;
+	if (nNum1 == 1)
+	{
+		srand((unsigned int)time(NULL));
+		num = rand() % 50;
+	}
+	if (nNum1 == 2)
+	{
+		srand((unsigned int)time(NULL));
+		num = rand() % 100;
+	}
+	cout << "共有10次猜测机会" << endl;
+	
+	for (i = 1; i <=10; i++)
+	{
+		cout << "请输入猜测的数字:" << endl;
+		cin >> nNum2;
+		{
+			if (nNum2 > num)
+				cout << "猜大了" << endl;
+			if (nNum2 < num)
+				cout << "猜小了" << endl;
+			cout << "您还剩余" << 10 - i <<"次机会\n" << endl;
+		}
+		if (nNum2 ==num)
+		{
+			cout << "恭喜猜对了游戏结束\n" << endl;
+			break;
+		}
+		 
+	}
+	if (i == 10)
+		cout << "失败，游戏结束\n" << endl;
+	return 0;
+}
