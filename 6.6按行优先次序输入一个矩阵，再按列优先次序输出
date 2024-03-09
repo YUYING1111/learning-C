@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	int a[2][3],i,j;
+	printf("请输入一个2*3的矩阵：\n");
+	for(i=0;i<2;i++)
+		for(j=0;j<3;j++)
+			scanf("%d",&a[i][j]);//外层嵌套为行数；内层嵌套为列数，即第一层循环
+	printf("按照列优先次序输出的结果为：\n");
+	for(j=0;j<3;j++)
+		{
+			for(i=0;i<2;i++)
+			printf("%d",a[i][j]);//外层嵌套i，j互换
+			printf("\n");
+		}
+ return 0;
+}
